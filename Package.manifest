@@ -1,0 +1,32 @@
+﻿{       
+    propertyEditors: [      
+        {
+        alias: "JsonDropDownList",
+        name: "JSON Drop Down List",
+        hideLabel: false,
+        valueType: "JSON",
+            editor: {
+                view: "~/App_Plugins/JsonDropDownList/View.html"
+            },
+			prevalues: {
+				fields: [
+					{
+						label: "Show Debug Trace",
+						description: "Toggles the debug information.",
+						key: "showDebugTrace",
+						view: "boolean"
+					},
+					{
+						label: "Request URL",
+						description: "The URL that contains the JSON data",
+						key: "requestUrl",
+						view: "textstring"
+					}
+				]
+			}
+        }
+    ],
+    javascript: [
+        "~/App_Plugins/JsonDropDownList/JsonDropDownList.controller.js"
+    ]
+}

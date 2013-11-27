@@ -1,0 +1,14 @@
+﻿<div data-ng-controller="JsonDropDownList.Controller">
+    <select 
+        data-ng-model="model.value" 
+        data-ng-options="dataOption for dataOption in dataOptions | orderBy:'toString()'"></select>
+    {{$scope.dataOptions}}
+    <div data-ng-show="model.config.showDebugTrace">
+        <h1>Debug information</h1>
+        <ul>
+            <li>Data URL: <a href="{{ model.config.requestUrl }}" target="_blank">{{ model.config.requestUrl }}</a></li>
+            <li>Model.value: {{ model.value }}</li>
+        </ul>
+    </div>
+
+</div>
